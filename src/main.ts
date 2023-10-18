@@ -71,16 +71,15 @@ function createUpgradeButtons() {
     // Function to handle the upgrade purchase
     upgradeButton.addEventListener("click", () => {
       if (counter >= upgrade.cost) {
-        counter -= upgrade.cost; // Deduct the cost from the counter
-        incrementPerSecond += upgrade.rate; // Increase the growth rate
-        counterText.innerHTML = `Monsters Slain: ${counter.toFixed(2)}`;
+        counter -= upgrade.cost;
+        incrementPerSecond += upgrade.rate;
+        counterText.innerHTML = `Fries Eaten :  ${counter.toFixed(2)}`;
         updateButtonStates();
       }
     });
   }
 }
 
-// activate/deactivate button
 function updateButtonStates() {
   for (const upgrade of upgrades) {
     const buttons = document.querySelectorAll("button");
