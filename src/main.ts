@@ -30,6 +30,7 @@ FriesButton.addEventListener("click", () => {
   counterText.innerHTML = `Fries Eaten :  ${counter}`;
 });
 
+// step 3: auto clickers step 4: updates by frame
 function updateCounter(timestamp: number) {
   if (!lastTimestamp) {
     lastTimestamp = timestamp;
@@ -40,7 +41,7 @@ function updateCounter(timestamp: number) {
   const increment = incrementPerSecond * elapsedTime;
 
   counter += increment;
-  counterText.innerHTML = `Monsters Slain: ${counter.toFixed(
+  counterText.innerHTML = `Fries Eaten : ${counter.toFixed(
     2,
   )}<br/>Auto Eat Rate: ${incrementPerSecond.toFixed(2)}`;
 
@@ -49,7 +50,7 @@ function updateCounter(timestamp: number) {
 }
 
 requestAnimationFrame(updateCounter);
-
+// step 5: upgrades
 interface Item {
   name: string;
   cost: number;
