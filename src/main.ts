@@ -86,13 +86,15 @@ function updateButtonStates() {
     const buttons = document.querySelectorAll("button");
 
     buttons.forEach((button) => {
-      if (button.textContent.includes(upgrade.name)) {
-        const upgradeButton = button as HTMLButtonElement;
+      if (button.textContent) {
+        if (button.textContent.includes(upgrade.name)) {
+          const upgradeButton = button as HTMLButtonElement;
 
-        if (counter < upgrade.cost) {
-          upgradeButton.disabled = true; // Disable the button
-        } else {
-          upgradeButton.disabled = false; // Enable the button
+          if (counter < upgrade.cost) {
+            upgradeButton.disabled = true; // Disable the button
+          } else {
+            upgradeButton.disabled = false; // Enable the button
+          }
         }
       }
     });
