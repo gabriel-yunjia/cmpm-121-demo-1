@@ -5,6 +5,8 @@ const app: HTMLDivElement = document.querySelector("#app")!;
 const gameName = "Gabriel's game";
 
 let counter = 0;
+let lastTimestamp = 0;
+let incrementPerSecond = 1;
 
 document.title = gameName;
 
@@ -28,7 +30,22 @@ Button.addEventListener("click", () => {
   counterText.innerHTML = `Fries Eaten :  ${counter}`;
 });
 
-setInterval(() => {
-  counter++;
-  counterText.innerHTML = `Fries Eaten :  ${counter}`;
-}, 1000);
+function updateCounter(timestamp: number) {
+  if (!lastTimestamp) {
+    lastTimestamp = timestamp;
+  }
+
+  const elapsedTime = (timestamp - lastTimestamp) / 1000;
+
+  const increment = incrementPerSecond * elapsedTime;
+
+  counter += increment;
+  counterText.innerHTML = `Monsters Slain: ${counter.toFixed(
+    2,
+  )}<br/>Auto Eat Rate: ${incrementPerSecond.toFixed(2)}`;
+
+  lastTimestamp = timestamp;
+  requestAnimationFrame(updateCounter);
+}
+
+requestAnimationFrame(updateCounter);
