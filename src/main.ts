@@ -6,7 +6,7 @@ const gameName = "Gabriel's game";
 
 let counter = 0;
 let lastTimestamp = 0;
-let incrementPerSecond = 1;
+const incrementPerSecond = 1;
 
 document.title = gameName;
 
