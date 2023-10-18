@@ -21,6 +21,8 @@ const counterText = document.createElement("div");
 counterText.innerHTML = ` Fries Eaten :  ${counter} `;
 app.append(counterText);
 
+// step 2: Making counter increment when clicked
+
 Button.addEventListener("click", () => {
   counter++;
   counterText.innerHTML = `Fries Eaten :  ${counter}`;
