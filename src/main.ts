@@ -2,7 +2,7 @@ import "./style.css";
 
 const app: HTMLDivElement = document.querySelector("#app")!;
 
-const gameName = "Gabriel's game";
+const gameName = "Gabriel's Fries Eating game";
 
 let counter = 0;
 let lastTimestamp = 0;
