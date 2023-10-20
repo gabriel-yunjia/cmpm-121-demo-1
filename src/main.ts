@@ -78,6 +78,10 @@ function createUpgradeButtons() {
         counterText.innerHTML = `Fries Eaten :  ${counter.toFixed(2)}`;
         updateButtonStates();
         requestAnimationFrame(updateCounter);
+        upgrade.cost = upgrade.cost * 1.15;
+        upgradeButton.innerHTML = `${
+          upgrade.name
+        } (Cost: ${upgrade.cost.toFixed(2)})<br/>${upgrade.description}`;
       }
     });
   }
