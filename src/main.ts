@@ -57,7 +57,7 @@ interface Item {
   description: string;
 }
 
-// Create upgrade items
+// Item data
 const upgrades: Item[] = [
   { name: "😋", cost: 10, rate: 0.1, description: "Another mouth" },
   { name: "👄", cost: 100, rate: 2, description: "Big mouth" },
