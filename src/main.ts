@@ -61,7 +61,9 @@ interface Item {
 const upgrades: Item[] = [
   { name: "😋", cost: 10, rate: 0.1, description: "Another mouth" },
   { name: "👄", cost: 100, rate: 2, description: "Big mouth" },
-  { name: "👩‍👨‍👧‍👦", cost: 1000, rate: 5, description: "Whole Family" },
+  { name: "👩‍👨‍👧‍👦", cost: 1000, rate: 5, description: "Whole family to eat lots of fries" },
+  { name: "🚌", cost: 2000, rate: 15, description: "A Bus full of fries enthusiasts" },
+  { name: "🗑️", cost: 5000, rate: 999, description: "Dump the fries out. Fast & Efficient." }
 ];
 
 function createUpgradeButtons() {
